@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Crear un DataFrame con datos de ejemplo
+datos = {'Nombre': ['Juan', 'María', 'Carlos', 'Ana'],
+         'Edad': [25, 30, 22, 28],
+         'Puntuación': [80, 95, 75, 88]}
+
+df = pd.DataFrame(datos)
+
+# Mostrar el DataFrame
+print("Datos originales:\n", df)
+
+# Calcular la media de la puntuación
+media_puntuacion = df['Puntuación'].mean()
+print("\nMedia de Puntuación:", media_puntuacion)
+
+# Crear un gráfico de dispersión
+plt.scatter(df['Edad'], df['Puntuación'])
+plt.title('Relación entre Edad y Puntuación')
+plt.xlabel('Edad')
+plt.ylabel('Puntuación')
+plt.show()
